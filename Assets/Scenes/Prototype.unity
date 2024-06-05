@@ -153,7 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camHeight: 3
-  camDis: 0
+  camDis: 1
   camSpeed: 1
   targetTransform: {fileID: 627080340}
 --- !u!4 &248893297
