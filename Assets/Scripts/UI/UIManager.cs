@@ -2,16 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+public class UIManager : MonoBehaviour
 {
-    [SerializeField] Canvas UI;
-    [SerializeField] GameObject player;
-
-    private int playerHealth;
-    private int playerHealthMax;
-    private int playerHealthMin;
-    
-
     // Start is called before the first frame update
     void Start()
     {
