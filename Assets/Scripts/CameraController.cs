@@ -7,8 +7,7 @@ public class CameraController : MonoBehaviour
     [SerializeField] float camHeight;
     [SerializeField] float camDis;
     [SerializeField] private float camSpeed;
- 
-
+    [SerializeField] Transform targetTransform;
     Vector3 targetPos = Vector3.zero;
 
     // Start is called before the first frame update
@@ -24,7 +23,7 @@ public class CameraController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        targetPos = GameObject.FindWithTag("Player").GetComponent<Transform>().position;
+        targetPos = targetTransform.position;
 
         targetPos.y += camHeight;
         targetPos.z -= camDis;
