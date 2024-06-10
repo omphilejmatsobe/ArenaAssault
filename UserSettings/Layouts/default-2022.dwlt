@@ -514,7 +514,7 @@ MonoBehaviour:
     m_SkipHidden: 1
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Hovl Studio
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -522,15 +522,15 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 60
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Hovl Studio
   m_LastFoldersGridSize: 60
   m_LastProjectPath: C:\Users\omphi\Documents\MyProjects\Games\ArenaAssault
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 4a060000
-    m_LastClickedID: 1610
+    m_SelectedIDs: 9c890000
+    m_LastClickedID: 35228
     m_ExpandedIDs: 00000000fa050000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -652,9 +652,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 94890000
-      m_LastClickedID: 35220
-      m_ExpandedIDs: 460affff660cffff
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 5e0bffff660cffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1149,7 +1149,7 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: 0, y: 0, z: 0, w: 1}
     speed: 2
-    m_Value: {x: 0, y: 0, z: 0, w: 1}
+    m_Value: {x: -0, y: 0, z: -0, w: -1}
   m_Size:
     m_Target: 7.630639
     speed: 2
