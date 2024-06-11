@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    // GameManager
+    [SerializeField] GameManager gameManager;
+
     // Movement set and restrictions
     [SerializeField] float moveSpeed;
     [SerializeField] float moveFactor;
@@ -18,6 +21,8 @@ public class PlayerMovement : MonoBehaviour
     // Key Inputs
     float hor;
     float vert;
+    float moveSelectorX;
+    float moveSelectorY;
 
     // Start is called before the first frame update
     void Start()
@@ -30,7 +35,28 @@ public class PlayerMovement : MonoBehaviour
 
     private void move()
     {
-        movementDirection = (transform.forward * vert) + (transform.right * hor);
+        if (gameManager.angleFlag == 0)
+        {
+            moveSelectorX = hor;
+            moveSelectorY = vert;
+        }
+        else if (gameManager.angleFlag == 1)
+        {
+            moveSelectorX = vert;
+            moveSelectorY = (-1) * hor;
+        }
+        else if (gameManager.angleFlag == 2)
+        {
+            moveSelectorX = (-1) * hor;
+            moveSelectorY = (-1) * vert;
+        }
+        else
+        {
+            moveSelectorX = (-1) * vert;
+            moveSelectorY = hor;
+        }
+
+        movementDirection = (transform.forward * moveSelectorY) + (transform.right * moveSelectorX);
 
         rb.AddForce (movementDirection * moveSpeed * moveFactor, ForceMode.Force);
     }
@@ -47,6 +73,6 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

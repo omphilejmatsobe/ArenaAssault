@@ -156,6 +156,7 @@ MonoBehaviour:
   camDis: 1
   camSpeed: 1
   targetTransform: {fileID: 627080340}
+  gameManager: {fileID: 308642739}
 --- !u!4 &248893297
 Transform:
   m_ObjectHideFlags: 0
@@ -225,6 +226,7 @@ MonoBehaviour:
   UI: {fileID: 1877050003}
   player: {fileID: 627080335}
   Camera: {fileID: 248893295}
+  angleFlag: 0
 --- !u!1 &589179584
 GameObject:
   m_ObjectHideFlags: 0
@@ -404,6 +406,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b12de58e56e212248aef4c74c0daf9a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 308642739}
   moveSpeed: 1
   moveFactor: 10
   jump: 1

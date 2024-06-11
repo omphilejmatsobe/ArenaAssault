@@ -26,13 +26,13 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.LeftAlt))
             angleFlag--;
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (Input.GetKeyDown(KeyCode.LeftControl))
             angleFlag++;
 
         if (angleFlag < 0)
-            angleFlag = 4;
+            angleFlag = 3;
 
-        if (angleFlag > 4)
+        if (angleFlag > 3)
             angleFlag = 0;
     }
 
