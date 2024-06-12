@@ -7,6 +7,9 @@ public class PlayerMovement : MonoBehaviour
     // GameManager
     [SerializeField] GameManager gameManager;
 
+    //Camera
+    [SerializeField] Camera cam;
+
     // Movement set and restrictions
     [SerializeField] float moveSpeed;
     [SerializeField] float moveFactor;
@@ -17,6 +20,9 @@ public class PlayerMovement : MonoBehaviour
     Transform transform;
     Vector3 playerVelocity = Vector3.zero;
     Vector3 movementDirection = Vector3.zero;
+
+    // Childe Object
+    [SerializeField] GameObject mesh;
 
     // Key Inputs
     float hor;
@@ -61,6 +67,18 @@ public class PlayerMovement : MonoBehaviour
         rb.AddForce (movementDirection * moveSpeed * moveFactor, ForceMode.Force);
     }
 
+    private void rotateMouseDirection()
+    {
+        Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+
+        if (Physics.Raycast(ray, out RaycastHit hit, maxDistance: 300f))
+        {
+            var target = hit.point;
+            target.y = mesh.transform.position.y;
+            mesh.transform.LookAt(target);
+        }
+    }
+
     private void FixedUpdate()
     {
         hor = Input.GetAxis("Horizontal");
@@ -73,6 +91,6 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        rotateMouseDirection();
     }
 }
