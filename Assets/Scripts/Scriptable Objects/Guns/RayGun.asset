@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cb73034900609c543825e757aee812bb, type: 3}
-  m_Name: Riffle
+  m_Name: RayGun
   m_EditorClassIdentifier: 
-  name: Riffle
-  price: 80
+  name: RayGun
+  price: 140
   owned: 0
   damage: 1
   maxDistance: 4

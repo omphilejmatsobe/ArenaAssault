@@ -9,7 +9,9 @@ public class PlayerProfile : ScriptableObject
     [Header("Player Info")]
     public string name;
     public int XP;
+    public int Cash;
     public List<int> LevelsUnlocked;
     public List<Guns> weapons;
     public List<Guns> superActions;
+    public int maxItems;
 }

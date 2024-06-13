@@ -8,6 +8,8 @@ public class Guns : ScriptableObject
 {
     [Header("Info")]
     public new string name;
+    public int price;
+    public bool owned;
 
     [Header("Shooting")]
     public float damage;

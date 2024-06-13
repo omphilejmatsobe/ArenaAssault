@@ -66,12 +66,15 @@
     <Compile Include="Assets\SlimUI\Modern Menu 1\Scripts\Misc\ResetDemo.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyAI.cs" />
     <Compile Include="Assets\SlimUI\Modern Menu 1\Scripts\ThemeEditor\ThemedUIElement.cs" />
+    <Compile Include="Assets\Scripts\GameSelector.cs" />
+    <Compile Include="Assets\Scripts\Inventory.cs" />
     <Compile Include="Assets\Scripts\Guns.cs" />
     <Compile Include="Assets\UnityTechnologies\ParticlePack\Shared\Ramps\Runtime\RampAsset.cs" />
     <Compile Include="Assets\Scripts\Arena\Ground.cs" />
     <Compile Include="Assets\UnityTechnologies\ParticlePack\Shared\Scripts\AdjustTimeScale.cs" />
     <Compile Include="Assets\SlimUI\Modern Menu 1\Scripts\Misc\ExtraLinks.cs" />
     <Compile Include="Assets\UnityTechnologies\ParticlePack\Shared\Scripts\SimpleCameraController.cs" />
+    <Compile Include="Assets\Scripts\PauseMenuScript.cs" />
     <Compile Include="Assets\UnityTechnologies\ParticlePack\Shared\Scripts\SimpleCharacterMotor.cs" />
     <Compile Include="Assets\SlimUI\Modern Menu 1\Scripts\Managers\UISettingsManager.cs" />
     <Compile Include="Assets\SlimUI\Modern Menu 1\Scripts\Audio\CheckSFXVolume.cs" />
@@ -83,6 +86,7 @@
     <Compile Include="Assets\Scripts\PlayerProfile.cs" />
     <Compile Include="Assets\SlimUI\Modern Menu 1\Scripts\Audio\CheckMusicVolume.cs" />
     <Compile Include="Assets\UnityTechnologies\ParticlePack\TutorialInfo\Scripts\Readme.cs" />
+    <Compile Include="Assets\Scripts\GameUIPlayerData.cs" />
     <Compile Include="Assets\Scripts\UI\UIManager.cs" />
     <Compile Include="Assets\Scripts\Arena\Platforms.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />

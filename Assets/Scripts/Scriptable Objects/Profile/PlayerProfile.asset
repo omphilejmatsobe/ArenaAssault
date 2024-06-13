@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: PlayerProfile
   m_EditorClassIdentifier: 
   name: Player
-  XP: 100
+  XP: 58
+  Cash: 20
   LevelsUnlocked: 01000000
   weapons:
   - {fileID: 11400000, guid: d4d37dcfe2c0908428b0642b19376a73, type: 2}
   superActions: []
+  maxItems: 0

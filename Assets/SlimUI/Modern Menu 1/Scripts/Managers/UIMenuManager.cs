@@ -3,10 +3,15 @@ using System.Collections;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace SlimUI.ModernMenu{
 	public class UIMenuManager : MonoBehaviour {
 		private Animator CameraObject;
+
+		[Header("Player")]
+		[SerializeField] PlayerProfile playerData;
+		[SerializeField] TMP_Text textLevel;
 
 		// campaign button sub menu
         [Header("MENUS")]
@@ -20,6 +25,10 @@ namespace SlimUI.ModernMenu{
         public GameObject exitMenu;
         [Tooltip("Optional 4th Menu")]
         public GameObject extrasMenu;
+
+		[Header("Inventory")]
+		public GameObject inventory;
+		public GameObject mainPanel;
 
         public enum Theme {custom1, custom2, custom3};
         [Header("THEME SETTINGS")]
@@ -118,17 +127,39 @@ namespace SlimUI.ModernMenu{
 		}
 
 		public void PlayCampaign(){
-			exitMenu.SetActive(false);
-			if(extrasMenu) extrasMenu.SetActive(false);
-			playMenu.SetActive(true);
+            if (playerData.weapons.Count == 0)
+            {
+                textLevel.text = "You Must have a Gun to play. Go to the Shop and purchase one.";
+                StartCoroutine(displayText());
+            }
+			else
+			{
+                exitMenu.SetActive(false);
+                if (extrasMenu) extrasMenu.SetActive(false);
+                playMenu.SetActive(true);
+            }
 		}
 		
 		public void PlayCampaignMobile(){
-			exitMenu.SetActive(false);
-			if(extrasMenu) extrasMenu.SetActive(false);
-			playMenu.SetActive(true);
-			mainMenu.SetActive(false);
+            if (playerData.weapons.Count == 0)
+            {
+                textLevel.text = "You Must have a Gun to play. Go to the Shop and purchase one.";
+				StartCoroutine(displayText());
+            }
+            else
+			{
+				exitMenu.SetActive(false);
+				if (extrasMenu) extrasMenu.SetActive(false);
+				playMenu.SetActive(true);
+				mainMenu.SetActive(false);
+			}
 		}
+
+		IEnumerator displayText()
+		{
+			yield return new WaitForSeconds(2);
+            textLevel.text = "";
+        }
 
 		public void ReturnMenu(){
 			playMenu.SetActive(false);
@@ -252,6 +283,18 @@ namespace SlimUI.ModernMenu{
 			if(extrasMenu) extrasMenu.SetActive(true);
 			exitMenu.SetActive(false);
 		}
+
+		public void inventoryMenu()
+		{
+			inventory.SetActive(true);
+			mainPanel.SetActive(false);
+        }
+
+		public void ReturnFromInventory()
+		{
+            inventory.SetActive(false);
+            mainPanel.SetActive(true);
+        }
 
 		public void QuitGame(){
 			#if UNITY_EDITOR

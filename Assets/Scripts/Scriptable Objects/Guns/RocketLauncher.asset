@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb73034900609c543825e757aee812bb, type: 3}
   m_Name: RocketLauncher
   m_EditorClassIdentifier: 
-  name: Riffle
+  name: Rocket
+  price: 400
+  owned: 0
   damage: 1
   maxDistance: 4
   bullet: {fileID: 2773802695561216327, guid: 982784ee2a7fac64b9d2cc8847d02cb4, type: 3}
