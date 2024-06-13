@@ -10,6 +10,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject Camera;
     [SerializeField] TMP_Text timer;
 
+    [SerializeField] AudioSource reload;
+    [SerializeField] AudioSource changeGun;
+
     public PlayerProfile playerData;
     public Guns currentWeapon;
 

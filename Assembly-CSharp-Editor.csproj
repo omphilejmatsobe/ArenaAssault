@@ -838,6 +838,10 @@
       <Project>{A37E3FE3-FCEE-7210-4205-B98BE41612DD}</Project>
       <Name>Assembly-CSharp</Name>
     </ProjectReference>
+    <ProjectReference Include="BigRookGames.csproj">
+      <Project>{E6953D12-F88E-BACA-4517-1EA4C8941DA7}</Project>
+      <Name>BigRookGames</Name>
+    </ProjectReference>
     <ProjectReference Include="UnityEditor.UI.csproj">
       <Project>{14CB3168-2721-4EB5-F124-77C5DE746A21}</Project>
       <Name>UnityEditor.UI</Name>
