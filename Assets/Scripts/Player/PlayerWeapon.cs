@@ -8,23 +8,47 @@ public class PlayerWeapon : MonoBehaviour
     [SerializeField] GameObject bullet;
 
     [Header("Weapon")]
-    [SerializeField] GameObject Weapon;
+    [SerializeField] Guns weapon;
 
     // Start is called before the first frame update
     void Start()
     {
-        Weapon = this.gameObject;
     }
 
     public void shoot()
     {
-        Debug.Log("Shooting");
+        if (weapon.currentAmmo > 0)
+        {
+
+            weapon.currentAmmo--;
+        }
+    }
+
+    public void reload()
+    {
+        ;
+    }
+
+    IEnumerator reloading()
+    {
+        weapon.reloading = true;
+        yield return new WaitForSeconds(weapon.reloadTime);
+        reload();
+        weapon.reloading = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKeyDown(KeyCode.Mouse0) && !weapon.reloading)
             shoot();
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            if (!weapon.reloading)
+            {
+                reload();
+            }
+        }
     }
 }

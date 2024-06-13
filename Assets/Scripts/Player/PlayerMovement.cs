@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float moveSpeed;
     [SerializeField] float moveFactor;
     [SerializeField] float jump;
+    [SerializeField] Ground ground;
 
     // Player Object
     Rigidbody rb;
@@ -79,6 +80,12 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    public void jumpCheck()
+    {
+        rb.AddForce(Vector3.up * 5, ForceMode.Impulse);
+        Debug.Log("Jumping");
+    }
+
     private void FixedUpdate()
     {
         hor = Input.GetAxis("Horizontal");
@@ -92,5 +99,10 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         rotateMouseDirection();
+
+        if (Input.GetKeyDown(KeyCode.Space) && ground.grounded == true)
+        {
+            jumpCheck();
+        }
     }
 }
