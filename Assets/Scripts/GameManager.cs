@@ -10,6 +10,11 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject Camera;
     [SerializeField] TMP_Text timer;
 
+    public PlayerProfile playerData;
+    public Guns currentWeapon;
+
+    public int XP;
+
     private int playerHealth;
     private int playerHealthMax;
     private int playerHealthMin;
@@ -22,7 +27,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        currentWeapon = playerData.weapons[0];
     }
 
     public void timeCounter()
@@ -44,6 +49,7 @@ public class GameManager : MonoBehaviour
         if (angleFlag > 3)
             angleFlag = 0;
 
+        XP = playerData.XP;
     }
 
     private void FixedUpdate()
@@ -55,5 +61,6 @@ public class GameManager : MonoBehaviour
             timer.text = "0" + ((int)(time / 60)).ToString() + ":" + ((int)seconds).ToString();
         else
             timer.text = "0" + ((int)(time / 60)).ToString() + ":" + "0" + ((int)seconds).ToString();
+
     }
 }

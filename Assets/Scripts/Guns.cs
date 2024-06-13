@@ -12,6 +12,7 @@ public class Guns : ScriptableObject
     [Header("Shooting")]
     public float damage;
     public float maxDistance;
+    public GameObject bullet;
 
     [Header("Reloading")]
     public float magazinSize;
