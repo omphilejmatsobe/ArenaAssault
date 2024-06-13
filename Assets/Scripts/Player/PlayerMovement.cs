@@ -82,7 +82,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void jumpCheck()
     {
-        rb.AddForce(Vector3.up * 5, ForceMode.Impulse);
+        rb.AddForce(Vector3.up * 3, ForceMode.Impulse);
         Debug.Log("Jumping");
     }
 

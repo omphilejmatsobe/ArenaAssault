@@ -383,4 +383,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
+  Parent: {fileID: 2620455609073423870}
   weapon: {fileID: 11400000, guid: d4d37dcfe2c0908428b0642b19376a73, type: 2}
+  bulletForce: 0

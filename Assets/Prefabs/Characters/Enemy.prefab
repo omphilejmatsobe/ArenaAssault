@@ -270,6 +270,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f9e3b7d01547bd4fbe82d89e53d9109, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerTransform: {fileID: 0}
+  bulletProjectile: {fileID: 2773802695561216327, guid: 982784ee2a7fac64b9d2cc8847d02cb4, type: 3}
+  bulletForce: 0
 --- !u!195 &6422281209425733215
 NavMeshAgent:
   m_ObjectHideFlags: 0

@@ -6,9 +6,12 @@ public class PlayerWeapon : MonoBehaviour
 {
     [Header("GameManager")]
     [SerializeField] GameManager gameManager;
+    [SerializeField] Transform parentTransform;
 
     [Header("Weapon")]
     [SerializeField] Guns weapon;
+    [SerializeField] float bulletForce;
+    GameObject bulletProjectile;
 
     private void Awake()
     {
@@ -18,6 +21,7 @@ public class PlayerWeapon : MonoBehaviour
     void Start()
     {
         weapon = gameManager.playerData.weapons[0];
+        bulletProjectile = weapon.bullet;
     }
 
     public void shoot()
@@ -26,6 +30,12 @@ public class PlayerWeapon : MonoBehaviour
         {
             weapon.currentAmmo--;
         }
+
+        GameObject bullet = Instantiate(bulletProjectile, transform.position, Quaternion.identity);
+
+        Debug.Log(parentTransform.transform.forward);
+
+        bullet.GetComponent<Rigidbody>().AddForce(parentTransform.transform.forward * bulletForce, ForceMode.Impulse);
 
         gameManager.playerData.XP++;
     }
