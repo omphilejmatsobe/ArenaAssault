@@ -119,7 +119,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
+  parentTransform: {fileID: 0}
   weapon: {fileID: 11400000, guid: d4d37dcfe2c0908428b0642b19376a73, type: 2}
+  bulletForce: 0
 --- !u!1 &2680944741259694950
 GameObject:
   m_ObjectHideFlags: 0
@@ -271,8 +273,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 0}
-  bulletProjectile: {fileID: 2773802695561216327, guid: 982784ee2a7fac64b9d2cc8847d02cb4, type: 3}
+  bulletProjectile: {fileID: 2773802695561216327, guid: 8a8a68e8b5ee9084db74b2443c3a5432, type: 3}
   bulletForce: 0
+  health: 100
 --- !u!195 &6422281209425733215
 NavMeshAgent:
   m_ObjectHideFlags: 0

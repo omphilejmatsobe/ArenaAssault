@@ -15,6 +15,7 @@ MonoBehaviour:
   name: ShotGun
   price: 800
   owned: 0
+  Sound: {fileID: 5953166961365952972, guid: 68593ed33b1972b4a947fd8883135eba, type: 3}
   damage: 1
   maxDistance: 4
   bullet: {fileID: 2773802695561216327, guid: 982784ee2a7fac64b9d2cc8847d02cb4, type: 3}

@@ -12,6 +12,7 @@ public class EnemyAI : MonoBehaviour
 
     bool inAttack = true;
     bool allowAttack = true;
+    public float health  = 100;
 
     // Start is called before the first frame update
     void Start()
@@ -45,5 +46,9 @@ public class EnemyAI : MonoBehaviour
     {
         agent.destination = playerTransform.position;
 
+        if (health <= 0)
+        {
+            Destroy(this.gameObject);
+        }
     }
 }

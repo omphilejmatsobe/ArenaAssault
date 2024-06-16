@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 884252004143863189}
   - component: {fileID: 1025165003024506390}
   - component: {fileID: 2690965244621762354}
-  m_Layer: 0
+  - component: {fileID: 6064040828709148756}
+  m_Layer: 12
   m_Name: SphereBullets
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -133,3 +134,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &6064040828709148756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2773802695561216327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cbeec488f66ddf449e8ec88c4231b3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletData: {fileID: 11400000, guid: 823f52ea900a43b4d9413b676765c8f9, type: 2}
+  particleStartPref: {fileID: 198234346748616026, guid: ad2ab49d0a2a17148bd51c93d977bdbc, type: 3}
+  particleEndPref: {fileID: 198234346748616026, guid: ad2ab49d0a2a17148bd51c93d977bdbc, type: 3}
+  sound: {fileID: 5953166961365952972, guid: 20501f76c0cbeb047815c2a62c415594, type: 3}
+  gameManager: {fileID: 0}

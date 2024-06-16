@@ -33,7 +33,12 @@ public class UIManager : MonoBehaviour
 
     public void tutorialLevel()
     {
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(2);
+    }
+
+    public void QuitApp()
+    {
+        Application.Quit();
     }
 
     // Update is called once per frame

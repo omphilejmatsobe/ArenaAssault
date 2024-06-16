@@ -3,7 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - GameManager
+  - Poles
+  - Flame
   layers:
   - Default
   - TransparentFX
@@ -14,10 +17,10 @@ TagManager:
   - Post Processing
   - Platforms
   - Floor
-  - 
-  - 
-  - 
-  - 
+  - Enemy
+  - Player
+  - EnemyBullet
+  - PlayerBullet
   - 
   - 
   - 

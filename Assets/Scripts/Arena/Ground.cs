@@ -5,19 +5,19 @@ using UnityEngine;
 
 public class Ground : MonoBehaviour
 {
-    public bool grounded = false;
+    GameManager gameManager;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        gameManager = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
     }
 
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-            grounded = true;
+            gameManager.grounded = true;
         }
     }
 
@@ -25,7 +25,7 @@ public class Ground : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            grounded = false;
+            gameManager.grounded = false;
         }
     }
 

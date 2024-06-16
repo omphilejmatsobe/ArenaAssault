@@ -100,7 +100,7 @@ public class PlayerMovement : MonoBehaviour
     {
         rotateMouseDirection();
 
-        if (Input.GetKeyDown(KeyCode.Space) && ground.grounded == true)
+        if (Input.GetKeyDown(KeyCode.Space) && gameManager.grounded == true)
         {
             jumpCheck();
         }

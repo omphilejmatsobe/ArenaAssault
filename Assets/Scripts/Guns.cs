@@ -10,6 +10,7 @@ public class Guns : ScriptableObject
     public new string name;
     public int price;
     public bool owned;
+    public AudioSource Sound;
 
     [Header("Shooting")]
     public float damage;

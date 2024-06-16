@@ -15,6 +15,7 @@ MonoBehaviour:
   name: Granade
   price: 50
   owned: 0
+  Sound: {fileID: 5953166961365952972, guid: 20501f76c0cbeb047815c2a62c415594, type: 3}
   damage: 1
   maxDistance: 4
   bullet: {fileID: 2773802695561216327, guid: 982784ee2a7fac64b9d2cc8847d02cb4, type: 3}

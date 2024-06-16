@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
-using static System.Net.Mime.MediaTypeNames;
+
 
 namespace SlimUI.ModernMenu{
 	public class UIMenuManager : MonoBehaviour {

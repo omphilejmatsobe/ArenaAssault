@@ -16,9 +16,11 @@ public class GameManager : MonoBehaviour
     public PlayerProfile playerData;
     public Guns currentWeapon;
 
+    public bool grounded;
+
     public int XP;
 
-    private int playerHealth;
+    public float playerHealth = 100;
     private int playerHealthMax;
     private int playerHealthMin;
 

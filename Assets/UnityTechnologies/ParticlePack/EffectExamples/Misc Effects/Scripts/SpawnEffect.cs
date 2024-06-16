@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpawnEffect : MonoBehaviour {
+public class SpawnEffects : MonoBehaviour {
 
     public float spawnEffectTime = 2;
     public float pause = 1;
@@ -27,7 +27,7 @@ public class SpawnEffect : MonoBehaviour {
 
     }
 	
-	void Update ()
+	void Update()
     {
         if (timer < spawnEffectTime + pause)
         {
